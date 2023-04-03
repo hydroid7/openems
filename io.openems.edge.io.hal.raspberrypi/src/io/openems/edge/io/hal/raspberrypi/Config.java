@@ -19,7 +19,7 @@ import org.osgi.service.metatype.annotations.Option;
 	boolean enabled() default true;
 	
 	@AttributeDefinition(name = "GPIO Path", description = "Path to the GPIOs on the filesystem.")
-	String gpioPath() default "/sys/class/gpio";
+	String gpioPath() default "/sys/class";
 	
 	@AttributeDefinition(name = "Hardware Plattform", description = "The hardware plattform in use.")
 	HardwarePlattformEnum hardwarePlattform() default HardwarePlattformEnum.MODBERRY_X500_CM4;

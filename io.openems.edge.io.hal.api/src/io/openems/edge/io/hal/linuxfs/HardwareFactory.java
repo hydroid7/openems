@@ -9,7 +9,7 @@ public class HardwareFactory {
 	private final String basePath;
 	
 	public HardwareFactory(String gpioPath) {
-		this.basePath = gpioPath;
+		this.basePath = gpioPath + "/gpio";
 	}
 	
 	/**
