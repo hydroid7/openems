@@ -4,7 +4,6 @@ import org.osgi.service.event.EventHandler;
 
 import io.openems.common.channel.AccessMode;
 import io.openems.common.channel.Level;
-import io.openems.common.types.OpenemsType;
 import io.openems.edge.common.channel.Doc;
 import io.openems.edge.common.component.OpenemsComponent;
 import io.openems.edge.common.startstop.StartStoppable;

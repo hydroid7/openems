@@ -3,6 +3,8 @@ package io.openems.edge.airconditioner.hydac4kw;
 import org.osgi.service.metatype.annotations.AttributeDefinition;
 import org.osgi.service.metatype.annotations.ObjectClassDefinition;
 
+import io.openems.edge.common.startstop.StartStopConfig;
+
 @ObjectClassDefinition(//
 		name = "Air conditioner Hydac 4kW 4701290", //
 		description = "")
@@ -16,10 +18,13 @@ import org.osgi.service.metatype.annotations.ObjectClassDefinition;
 
 	@AttributeDefinition(name = "Is enabled?", description = "Is this Component enabled?")
 	boolean enabled() default true;
-	
+
+	@AttributeDefinition(name = "Start/stop behaviour?", description = "Should this Component be forced to start or stop?")
+	StartStopConfig startStopConfig() default StartStopConfig.AUTO;
+
 	String webconsole_configurationFactory_nameHint() default "io.openems.edge.airconditioner.hydac4kw [{id}]";
 
-	@AttributeDefinition(name = "Maximal starts per hour", description = "How often the air conditioner can be restarted per hour.") 
+	@AttributeDefinition(name = "Maximal starts per hour", description = "How often the air conditioner can be restarted per hour.")
 	int getMaxRestartPerHour() default 4;
 
 }

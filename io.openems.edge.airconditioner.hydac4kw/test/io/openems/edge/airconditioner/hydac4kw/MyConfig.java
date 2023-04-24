@@ -1,6 +1,7 @@
 package io.openems.edge.airconditioner.hydac4kw;
 
 import io.openems.common.test.AbstractComponentConfig;
+import io.openems.edge.common.startstop.StartStopConfig;
 
 @SuppressWarnings("all")
 public class MyConfig extends AbstractComponentConfig implements Config {
@@ -46,6 +47,12 @@ public class MyConfig extends AbstractComponentConfig implements Config {
 	@Override
 	public int getMaxRestartPerHour() {
 		return 4;
+	}
+
+	@Override
+	public StartStopConfig startStopConfig() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
